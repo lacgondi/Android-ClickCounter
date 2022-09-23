@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (num - 1 == 0) {
+                if (num + 1 == 0) {
                     num++;
                     output.setText(num);
                     output.setTextColor(Color.rgb(45, 94, 216));
@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 if (num - 1 == 0) {
                     num--;
                     output.setText(num);
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 num = 0;
                 output.setText(num);
-
+                output.setTextColor(Color.rgb(45, 94, 216));
             }
         });
     }
