@@ -25,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (num + 1 == 0) {
                     num++;
-                    output.setText(num);
+                    output.setText(String.valueOf(num));
                     output.setTextColor(Color.rgb(45, 94, 216));
                 } else {
                     num++;
-                    output.setText(num);
+                    output.setText(String.valueOf(num));
                     output.setTextColor(Color.rgb(76, 175, 80));
                 }
             }
@@ -39,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (num - 1 == 0) {
                     num--;
-                    output.setText(num);
+                    output.setText(String.valueOf(num));
                     output.setTextColor(Color.rgb(45, 94, 216));
                 } else {
                     num--;
-                    output.setText(num);
+                    output.setText(String.valueOf(num));
                     output.setTextColor(Color.rgb(244, 67, 54));
                 }
 
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 num = 0;
-                output.setText(num);
+                output.setText(String.valueOf(num));
                 output.setTextColor(Color.rgb(45, 94, 216));
             }
         });
