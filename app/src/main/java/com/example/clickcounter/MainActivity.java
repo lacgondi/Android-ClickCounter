@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.clickcounter.R;
+
 public class MainActivity extends AppCompatActivity {
     private int num;
     private TextView output;
@@ -18,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         init();
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,30 +29,45 @@ public class MainActivity extends AppCompatActivity {
                     output.setText(String.valueOf(num));
                     output.setTextColor(Color.rgb(45, 94, 216));
                 } else {
-                    num++;
-                    output.setText(String.valueOf(num));
-                    output.setTextColor(Color.rgb(76, 175, 80));
+                    if (num + 1 < 0) {
+                        output.setTextColor(Color.rgb(244, 67, 54));
+                        num++;
+                        output.setText(String.valueOf(num));
+                    } else {
+                        num++;
+                        output.setText(String.valueOf(num));
+                        output.setTextColor(Color.rgb(76, 175, 80));
+                    }
                 }
             }
         });
         minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if (num - 1 == 0) {
                     num--;
                     output.setText(String.valueOf(num));
                     output.setTextColor(Color.rgb(45, 94, 216));
                 } else {
-                    num--;
-                    output.setText(String.valueOf(num));
-                    output.setTextColor(Color.rgb(244, 67, 54));
+                    if (num - 1 < 0) {
+                        output.setTextColor(Color.rgb(244, 67, 54));
+                        num--;
+                        output.setText(String.valueOf(num));
+                    } else {
+                        num--;
+                        output.setText(String.valueOf(num));
+                        output.setTextColor(Color.rgb(76, 175, 80));
+                    }
                 }
 
             }
         });
-        output.setOnClickListener(new View.OnClickListener() {
+        output.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
-            public void onClick(View view) {
+            public void onClick (View view){
                 num = 0;
                 output.setText(String.valueOf(num));
                 output.setTextColor(Color.rgb(45, 94, 216));
