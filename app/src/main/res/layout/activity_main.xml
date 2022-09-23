@@ -20,8 +20,9 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/num"
-        android:text="test"
+        android:text="0"
         android:textSize="30dp"
+        android:clickable="true"
         android:textColor="#FF2D5ED8"
         />
     <Button
@@ -29,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/num"
+        android:id="@+id/minus"
         android:text="-"
         />
 
